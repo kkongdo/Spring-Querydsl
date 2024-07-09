@@ -14,7 +14,8 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
     private final JPAQueryFactory queryFactory;
 
     @Override
-    public List<User> findUsersByName(String name) { // RequestParam으로 받아온 이름을 조건식에 사용해서 해당 조건에 맞는 엔티티 가져오기
+    public List<User> findUsersByName(String name) {
+        // RequestParam으로 받아온 이름을 조건식에 사용해서 해당 조건에 맞는 엔티티 가져오기
         QUser user = QUser.user;
         return queryFactory.selectFrom(user)
                 .where(user.name.eq(name))
