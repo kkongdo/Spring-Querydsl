@@ -43,7 +43,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
         }
         return queryFactory.selectFrom(user)
                 .leftJoin(user.posts, post).fetchJoin()
-                .where(user.name.eq(name))
+                .where(builder)
                 .fetch();
     }
 }
