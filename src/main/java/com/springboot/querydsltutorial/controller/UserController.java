@@ -24,6 +24,7 @@ public class UserController {
                                                         @RequestParam(required = false) String email) {
         return userService.findUsersByNameAndEmail(name, email);
     }
+    // 주석 처리
     // /users/search : 모든 사용자를 반환한다.
     // /users/search?name=안녕 : 이름이 안녕인 사용자의 데이터를 모두 반환한다.
     // /users/search?email=hello@example.com : 이메일이 hello@example.com인 사용자의 데이터를 모두 반환한다.
